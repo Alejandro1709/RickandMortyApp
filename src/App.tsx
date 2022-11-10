@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import MainContainer from './components/MainContainer';
 import Navbar from './components/Navbar';
 import Section from './components/Section';
+import Navigation from './components/Navigation';
 import type Character from './types/character';
 import './App.css';
 
@@ -31,11 +32,7 @@ function App() {
       <Navbar />
       <MainContainer>
         <Section size='sm'>
-          <div className='navigation'>
-            <a href='#'>Back</a>
-            <p>Character Detail</p>
-            <p>Additional Info</p>
-          </div>
+          <Navigation backUrl='/' title='Character Details' />
           <div className='App__content'>
             <div className='content__left'>LEFT</div>
             <div className='content__right'>RIGHT</div>
