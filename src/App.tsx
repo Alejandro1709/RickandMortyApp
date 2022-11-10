@@ -30,7 +30,17 @@ function App() {
     <div className='App'>
       <Navbar />
       <MainContainer>
-        <Section size='sm'>Hola</Section>
+        <Section size='sm'>
+          <div className='navigation'>
+            <a href='#'>Back</a>
+            <p>Character Detail</p>
+            <p>Additional Info</p>
+          </div>
+          <div className='App__content'>
+            <div className='content__left'>LEFT</div>
+            <div className='content__right'>RIGHT</div>
+          </div>
+        </Section>
       </MainContainer>
     </div>
   );
