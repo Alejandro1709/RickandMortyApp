@@ -21,7 +21,7 @@ function App() {
 
   useEffect(() => {
     setState({ ...state, status: 'loading' });
-    fetch('https://rickandmortyapi.com/api/character/2')
+    fetch('https://rickandmortyapi.com/api/character/4')
       .then((res) => res.json())
       .then((data) => setState({ ...state, status: 'idle', data }))
       .catch((err) => setState({ ...state, data: null, error: err }));
@@ -33,9 +33,36 @@ function App() {
       <MainContainer>
         <Section size='sm'>
           <Navigation backUrl='/' title='Character Details' />
-          <div className='App__content'>
-            <div className='content__left'>LEFT</div>
-            <div className='content__right'>RIGHT</div>
+          <div className='content'>
+            <div className='content__left'>
+              <div className='left__imgHolder'>
+                <img
+                  src={state.data?.image}
+                  alt={state.data?.name}
+                  draggable={false}
+                />
+              </div>
+              <div className='left__addons'>
+                <span className='addons__item'>
+                  Origin: {state.data?.origin.name}
+                </span>
+                <span className='addons__item'>
+                  Location: {state.data?.location.name}
+                </span>
+                <span className='addons__item'>
+                  # Episodes: {state.data?.episode.length}
+                </span>
+              </div>
+            </div>
+            <div className='content__right'>
+              <ul role='list' className='right__list'>
+                <li className='list__item'>Name: {state.data?.name}</li>
+                <li className='list__item'>Status: {state.data?.status}</li>
+                <li className='list__item'>Gender: {state.data?.gender}</li>
+                <li className='list__item'>Type: {state.data?.type}</li>
+                <li className='list__item'>Species: {state.data?.species}</li>
+              </ul>
+            </div>
           </div>
         </Section>
       </MainContainer>

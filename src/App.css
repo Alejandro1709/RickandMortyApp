@@ -1,0 +1,53 @@
+.content {
+  display: flex;
+  flex-direction: row;
+  gap: 1.31rem;
+}
+
+.content__left {
+  display: flex;
+  flex-direction: column;
+  gap: 1.31rem;
+}
+
+.left__imgHolder {
+  width: 15rem;
+  height: 15rem;
+  border: 1px solid var(--clr-secondary);
+  background-color: white;
+}
+
+.left__imgHolder img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.left__addons,
+.right__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+  user-select: none;
+}
+
+.addons__item,
+.list__item {
+  border: 1px solid var(--clr-secondary);
+  background-color: white;
+  text-align: center;
+  padding: 8px 0;
+}
+
+.addons__item {
+  max-width: 15rem;
+}
+
+.content__right {
+  flex: 1;
+}
+
+.list__item {
+  padding-left: 1rem;
+  text-align: left;
+  width: 100%;
+}
