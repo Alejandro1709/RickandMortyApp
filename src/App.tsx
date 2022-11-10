@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import MainContainer from './components/MainContainer';
 import Navbar from './components/Navbar';
+import Section from './components/Section';
 import type Character from './types/character';
 import './App.css';
 
@@ -29,7 +30,7 @@ function App() {
     <div className='App'>
       <Navbar />
       <MainContainer>
-        <section className='section'>Hola</section>
+        <Section size='sm'>Hola</Section>
       </MainContainer>
     </div>
   );
