@@ -8,7 +8,7 @@ interface StateProps {
   error: Error | null;
 }
 
-export default function useCharacters() {
+export default function useCharacters(id: string) {
   const [state, setState] = useState<StateProps>({
     status: 'idle',
     data: null,
@@ -17,7 +17,7 @@ export default function useCharacters() {
 
   useEffect(() => {
     setState({ ...state, status: 'loading' });
-    fetchCharacter('5').then((data) => setState({ ...state, data }));
+    fetchCharacter(id).then((data) => setState({ ...state, data }));
   }, []);
 
   return { ...state };

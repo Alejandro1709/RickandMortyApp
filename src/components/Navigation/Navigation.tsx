@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import styles from './Navigation.module.css';
 
 interface NavigationProps {
@@ -8,7 +9,7 @@ interface NavigationProps {
 function Navigation({ backUrl, title }: NavigationProps) {
   return (
     <div className={styles.navigation}>
-      <a href={backUrl}>Back</a>
+      <Link to={backUrl}>Back</Link>
       <p>{title}</p>
       <p>Additional Info</p>
     </div>

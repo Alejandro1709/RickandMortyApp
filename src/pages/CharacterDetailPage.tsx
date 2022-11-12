@@ -1,14 +1,18 @@
 import React from 'react';
+import { useParams } from 'react-router-dom';
 import CharacterDetail from '../components/CharacterDetail';
 import Navigation from '../components/Navigation';
-import Character from '../types/character';
+import useCharacters from '../hooks/useCharacters';
 
-interface CharacterPageProps {
-  error?: Error | null;
-  data: Character;
-}
+function CharacterDetailPage() {
+  const { id } = useParams();
 
-function CharacterDetailPage({ data, error }: CharacterPageProps) {
+  if (!id) return <h1>Character Not Found.</h1>;
+
+  const { status, data, error } = useCharacters(id);
+
+  if (status === 'loading') return <p>Loading...</p>;
+
   return (
     <React.Fragment>
       <Navigation backUrl='/' title='Character Details' />

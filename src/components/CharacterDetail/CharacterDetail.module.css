@@ -1,0 +1,53 @@
+.content {
+  display: flex;
+  flex-direction: row;
+  gap: 1.31rem;
+}
+
+.contentLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 1.31rem;
+}
+
+.leftImgHolder {
+  width: 15rem;
+  height: 15rem;
+  border: 1px solid var(--clr-secondary);
+  background-color: white;
+}
+
+.leftImgHolder img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.leftAddons,
+.rightList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+  user-select: none;
+}
+
+.addonsItem,
+.listItem {
+  border: 1px solid var(--clr-secondary);
+  background-color: white;
+  text-align: center;
+  padding: 8px 0;
+}
+
+.addonsItem {
+  max-width: 15rem;
+}
+
+.contentRight {
+  flex: 1;
+}
+
+.listItem {
+  padding-left: 1rem;
+  text-align: left;
+  width: 100%;
+}
