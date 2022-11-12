@@ -3,3 +3,9 @@ export function fetchCharacter(id: string) {
     res.json()
   );
 }
+
+export function fetchCharacters() {
+  return fetch('https://rickandmortyapi.com/api/character').then((res) =>
+    res.json()
+  );
+}
