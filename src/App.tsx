@@ -15,7 +15,7 @@ function App() {
           <Routes>
             <Route index path='/' element={<HomePage />} />
             <Route path='/characters/:id' element={<CharacterDetailPage />} />
-            <Route path='*' element={<h1>Page Not Found</h1>} />
+            <Route path='*' element={<h1>404 Page Not Found</h1>} />
           </Routes>
         </Section>
       </MainContainer>
