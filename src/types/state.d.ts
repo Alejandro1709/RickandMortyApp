@@ -11,7 +11,7 @@ export interface Result {
 }
 
 export default interface StateProps {
-  status: 'idle' | 'loading' | 'error';
-  data: Character | Resylt | null;
+  status: 'idle' | 'pending' | 'success' | 'error';
+  data: Character | Result | null;
   error: Error | null;
 }

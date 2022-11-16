@@ -10,7 +10,7 @@ export default function useCharacters(id: string) {
   });
 
   useEffect(() => {
-    setState({ ...state, status: 'loading' });
+    setState({ ...state, status: 'pending' });
     fetchCharacter(id).then((data) => setState({ ...state, data }));
   }, []);
 
