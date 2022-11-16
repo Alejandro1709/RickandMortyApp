@@ -1,7 +1,7 @@
 import Character from './character';
 
 export interface Result {
-  info: {
+  info?: {
     count: number;
     next: string;
     pages: number;
